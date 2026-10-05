@@ -77,3 +77,9 @@
 - Full production build/offline generation and 30/30 tests pass.
 - New tests verify same linear scaling for all three distance targets, fixed reference rulers, real intermediate SVG transforms/line positions, interruption and reversal, 1/10 cm presets, distance switching, reduced motion, and coexistence with original cosmic controls.
 - Public browser visual QA has not been performed for this revision. Prior tool denials remain respected; no denied call was repeated or bypassed. Actual mobile layout is not visually verified.
+
+### Published ruler-animation revision
+
+- Runtime main commit 5201bd210a3a017252964881bda97536fec3d04e; deployed gh-pages commit 0bed9d8b2132d665cd45ebf5c6c319ad5e10e495.
+- GitHub Pages workflow 37341147956 succeeded. All 38 source files and 5 dist files matched remote SHA/size.
+- No public-browser visual QA or public-HTTP sweep was performed for this release, respecting the earlier denied browser action and cancelled sweep. Deployment and the 30 local tests are verified; public visual appearance is not claimed as verified.
