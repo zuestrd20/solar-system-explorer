@@ -33,3 +33,11 @@
 - Cloud Chrome at 1165px: WebGL disabled by the environment; Canvas2D final observable-universe layer visually inspected, no horizontal overflow.
 - Public UI passed direct layer jumps, slider Home/Arrow controls, Back, Earth ruler at 1.1 cm, End/reset, and return to original solar-system explorer.
 - Actual GPU rendering and mobile viewport/touch remain unverified. Published fallback tests do not claim GPU validation.
+
+## Continuous Earth-anchored zoom revision — 2026-10-05, 12:51 UTC
+
+- 21/21 tests pass, including new deterministic animation-clock tests and Canvas2D render integration with recorded arc radii.
+- Intermediate frames demonstrably change geometric scale and Earth radius; reversal begins at the current value, rapid retarget preserves position, reset/Back cancel old motion, reduced-motion immediately resolves targets.
+- Shared Earth anchor and matching Sun geometry across neighboring solar layers verified mathematically.
+- Vite build and offline generation pass. All prior content/ruler/comparison/history tests retained.
+- Public visual verification for this new animation is pending deployment. Prior expansion screenshots do not validate this animation revision. Real GPU and mobile remain unverified.

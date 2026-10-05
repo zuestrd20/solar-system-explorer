@@ -10,18 +10,18 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 
 vite v7.3.6 building client environment for production...
 transforming...
-✓ 14 modules transformed.
+✓ 15 modules transformed.
 rendering chunks...
 computing gzip size...
-dist/index.html                   9.62 kB │ gzip:   4.64 kB
-dist/assets/index-BeDFDX6v.css   17.00 kB │ gzip:   4.50 kB
-dist/assets/index-Dkq41fKB.js   542.82 kB │ gzip: 140.35 kB
+dist/index.html                   9.78 kB │ gzip:   4.70 kB
+dist/assets/index-DVn8LnHd.css   17.26 kB │ gzip:   4.58 kB
+dist/assets/index-Brj-MKcg.js   546.68 kB │ gzip: 141.76 kB
 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 1.23s
+✓ built in 1.22s
 npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
 
 > solar-system-explorer@1.0.0 offline
@@ -32,24 +32,32 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 > solar-system-explorer@1.0.0 test
 > node --test tests/*.test.js
 
-✔ seven sourced layers distinguish diameters, separations and observable radius (1.454252ms)
-✔ one-centimeter Earth uses one exact linear scale, not visual distances (0.141689ms)
-✔ geometry deterministic, finite and bounded for mobile (7.361542ms)
-✔ all seven fallback scenes draw and jump, keyboard, reset keep content complete (345.115242ms)
-✔ slider commits history and Back restores both cosmic and original planet state (215.826353ms)
-✔ reduced motion, invalid layer, ruler recalculation and original controls survive (152.436502ms)
-✔ eight distinct planets, separate Sun and official citations (1.362506ms)
-✔ orbit positions finite, radius exact, periods complete full circle (0.381685ms)
-✔ orbit geometry closes, uses finite vertices and excludes center (4.415964ms)
-✔ comparison linear and not artificially minimum-clamped (0.226385ms)
-✔ no GPU gracefully exposes all nine bodies and full sources (285.73248ms)
-✔ all bodies selectable repeatedly, comparisons complete (220.705422ms)
-✔ invalid link defaults to Earth, history restores selection (210.693589ms)
-ℹ tests 13
+✔ seven sourced layers distinguish diameters, separations and observable radius (1.68341ms)
+✔ one-centimeter Earth uses one exact linear scale, not visual distances (0.179396ms)
+✔ geometry deterministic, finite and bounded for mobile (7.492302ms)
+✔ all seven fallback scenes draw and jump, keyboard, reset keep content complete (374.341947ms)
+✔ slider commits history and Back restores both cosmic and original planet state (237.311727ms)
+✔ reduced motion, invalid layer, ruler recalculation and original controls survive (145.878488ms)
+✔ actual 2D render produces intermediate scaled frames and reverses without jumping (371.890655ms)
+✔ rapid target changes, reset and Back cancel active UI tween (241.143436ms)
+✔ eight distinct planets, separate Sun and official citations (1.062932ms)
+✔ orbit positions finite, radius exact, periods complete full circle (0.285953ms)
+✔ orbit geometry closes, uses finite vertices and excludes center (2.599996ms)
+✔ comparison linear and not artificially minimum-clamped (0.171164ms)
+✔ default zoom has distinct intermediate time frames and shrinking Earth (1.444446ms)
+✔ reversal and rapid retarget begin exactly at the current animated position (0.203551ms)
+✔ reset and history-style immediate jump cancel pending animation (0.245473ms)
+✔ reduced motion opts out; continuous slider accepts fractional positions (0.203111ms)
+✔ layer scaling is continuous across stops, not a scene replacement (0.326142ms)
+✔ Earth is a shared anchor and Sun aligns through solar-context transition (0.688839ms)
+✔ no GPU gracefully exposes all nine bodies and full sources (315.26712ms)
+✔ all bodies selectable repeatedly, comparisons complete (290.710858ms)
+✔ invalid link defaults to Earth, history restores selection (229.407965ms)
+ℹ tests 21
 ℹ suites 0
-ℹ pass 13
+ℹ pass 21
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 1130.50934
+ℹ duration_ms 1459.179239
