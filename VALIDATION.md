@@ -1,23 +1,25 @@
-# Verification, 2026-10-05
+# Verification — cosmic-scale expansion, 2026-10-05
 
-## Passed
-- Vite production build, relative base path for GitHub Pages.
-- Offline self-contained HTML generation; no external textures/fonts/API required.
-- 7 Node/jsdom tests: all 8 planet records and NASA sources; orbit radius/period invariance; closed finite orbit geometry; exact linear ratios; no-WebGL full 2D fallback; repeated body selection and all comparison metrics; invalid query and browser Back selection restoration.
-- All scientific facts and numeric sources independently researched against NASA/JPL. Source definitions and visual-model limitations displayed on site.
+## Passed locally
+- Vite production build with relative `./` base and self-contained offline HTML generation.
+- 13/13 Node/jsdom tests, including all original solar-system tests.
+- Seven cosmic data stages, official citations, diameter/separation/observable-radius definitions.
+- Exact linear Earth-model calculations: 1 cm Earth → 117.4 m to Sun, about 3.53 km to Neptune's orbit, about 31,481 km Sun–Proxima separation.
+- Deterministic finite geometry, at most 1,500 points per layer.
+- All seven Canvas fallback drawing paths exercised with a mocked 2D context; actual pixels are not established by this test.
+- Direct jumps, slider preview versus committed history, previous/next endpoints, keyboard/Home/End, reset, return to original solar section.
+- Browser Back restores both cosmic scale and original planet state; invalid URL defaults safely.
+- Reduced-motion preference and recalculation of model-Earth ruler; original body selection/comparison preserved.
 
-## Not visually verified locally
-- The container's Chromium cannot start due to its process/socket restrictions, including one reviewed attempt outside the shell sandbox. No local desktop/mobile screenshots were obtained.
-- WebGL2 rendering, shader appearance, GPU context loss, pointer picking, and camera motion remain unverified on a real GPU. Static geometry tests do not prove GPU rendering quality.
-- Desktop/mobile layout must be checked on the authorized public Pages URL through the cloud browser after deployment. Cloud browser without WebGL2 verifies only the 2D fallback and layout, not the 3D renderer.
+## Visual verification limits
+- Runtime disallows local Chromium launch due to process/socket restrictions. No local desktop/mobile screenshots.
+- Actual WebGL2 shader appearance, 3D camera transitions, GPU context loss and touch scrolling require browser verification. Unit tests are not equivalent to GPU or touch QA.
+- The earlier version's published 1165px desktop 2D fallback was verified. This expansion must be reviewed on the updated public URL after deployment; old screenshots do not validate new content.
 
-## Non-blocking build notice
-- Vite warns that the Three.js bundle exceeds 500 kB uncompressed (~133 kB gzip). This is expected for the bundled renderer and avoids third-party CDN dependencies.
+## Science and media
+- Independent official NASA/JPL source research in SOURCES.md and COSMIC_SOURCES.md.
+- All 3D/2D surfaces, star points and galaxy shapes are original programmatic teaching diagrams, not photographs or precise maps.
+- Scale transitions are explicitly separate illustrative layers. Heliosphere, planetary region and Oort cloud are not conflated. Observable radius, light-travel time and age are distinguished.
 
-## Public deployment verification
-
-- Live URL: https://zuestrd20.github.io/solar-system-explorer/
-- GitHub Pages successful build for exact gh-pages commit a2f7945078a2681a7092f3bba8ce390b509376c6.
-- Publisher verified SHA and size for all 23 source files and all 5 dist files against uploaded content.
-- Cloud Chrome at 1165px viewport: WebGL disabled by environment, automatically displayed complete 2D fallback. Screenshot inspected without horizontal overflow; Mars selection, all three comparison controls, and Back restoration passed.
-- Mobile viewport and real WebGL2/GPU appearance remain unverified. No claim is made that 3D rendered successfully in this environment.
+## Build notice
+- Vite emits a non-blocking size notice for the bundled Three.js client. No external CDN or network assets are needed for the offline file.

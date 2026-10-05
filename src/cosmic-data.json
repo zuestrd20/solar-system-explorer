@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "verifiedAt": "2026-10-05",
+    "language": "zh-Hant",
+    "disclaimer": "AI協助製作的教學示意；來源列出原始NASA/JPL資料，並非NASA審核或背書。",
+    "visualizationNotice": "各站重新設定視野；天體及星點為了可見而放大，銀河與星系位置為示意。這不是一張全程等比例的精確宇宙地圖。",
+    "scaleNotice": "每站均標明直徑、半徑或天體間距離。切勿用通用「距離地球」標題覆蓋這些不同定義。",
+    "modelNotice": "地球直徑縮為1公分的尺規才是統一線性縮尺；距離量測的起點依標籤而定。",
+    "oortNote": "7站版在solar附註中介紹日球層和歐特雲；scales另提供9層資料，可選擇顯示。",
+    "rangeNote": "range為null表示來源只提供近似值，並非零誤差；不虛構置信区間。"
+  },
+  "constants": {
+    "earthDiameterKm": 12742.0168,
+    "auKm": 149597870.7,
+    "lightYearKm": 9460730472580.799,
+    "speedOfLightKmS": 299792.458,
+    "julianYearDays": 365.25,
+    "neptuneOrbitAU": 30.06992276,
+    "proximaDistanceLy": 4.24,
+    "sources": {
+      "earthDiameterKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "auKm": "https://ssd.jpl.nasa.gov/astro_par.html",
+      "lightYearKm": "https://ssd.jpl.nasa.gov/astro_par.html",
+      "speedOfLightKmS": "https://ssd.jpl.nasa.gov/astro_par.html",
+      "julianYearDays": "https://ssd.jpl.nasa.gov/astro_par.html",
+      "neptuneOrbitAU": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+      "proximaDistanceLy": "https://science.nasa.gov/sun/facts/"
+    },
+    "definitions": {
+      "earthDiameterKm": "JPL體積等效平均半徑的兩倍。",
+      "auKm": "天文單位的精確定義；地日距離約1 AU但會隨軌道位置改變。",
+      "lightYearKm": "真空光速×365.25日×86400秒換算；光年是長度單位。"
+    }
+  },
+  "stages": [
+    {
+      "id": "earth",
+      "name": "地球",
+      "kicker": "我們的起點",
+      "scaleLabel": "平均直徑約 12,742 公里",
+      "title": "從一顆藍色星球出發",
+      "facts": [
+        "先把地球當作尺規，接著比較天體之間的距離。",
+        "直徑衡量地球本身有多大；下一站則衡量兩個天體相隔多遠。"
+      ],
+      "caution": "地球不是完美球體；這裡使用體積等效平均直徑。",
+      "source": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "sourceLabel": "NASA / JPL 原始資料",
+      "extentType": "mean_diameter",
+      "value": 12742.0168,
+      "unit": "km",
+      "approximate": true,
+      "range": null,
+      "lightTime": "光走過相同長度約 0.043 秒（不是穿過地球）",
+      "distanceKm": 12742.0168
+    },
+    {
+      "id": "sun",
+      "name": "地球到太陽",
+      "kicker": "從大小轉向距離",
+      "scaleLabel": "代表距離 1 AU ≈ 1.496 億公里",
+      "title": "陽光也需要時間抵達",
+      "facts": [
+        "天文單位 AU 是描述太陽系距離的方便尺規。",
+        "陽光走完1 AU約需8分19秒；真實地日距離會略有變化。"
+      ],
+      "caution": "1 AU是固定長度單位，不表示地球每一刻都離太陽恰好1 AU。",
+      "source": "https://ssd.jpl.nasa.gov/astro_par.html",
+      "sourceLabel": "NASA / JPL 原始資料",
+      "extentType": "representative_separation",
+      "value": 1,
+      "unit": "AU",
+      "approximate": true,
+      "range": null,
+      "lightTime": "1 AU 的光行時約 8 分 19 秒",
+      "distanceKm": 149597870.7,
+      "distanceAU": 1
+    },
+    {
+      "id": "solar",
+      "name": "行星區與更遠處",
+      "kicker": "太陽系沒有單一硬邊界",
+      "scaleLabel": "太陽到海王星軌道約 30 AU",
+      "title": "跨出行星區，旅程仍未結束",
+      "facts": [
+        "海王星軌道半長軸約30 AU；這是從太陽向外量的距離。",
+        "日球層是太陽風形成的區域；旅行者探測器約在120 AU附近越過日球層頂。",
+        "更遠還有推測中的歐特雲；行星區、日球層和歐特雲指的是不同範圍。"
+      ],
+      "caution": "30 AU不是太陽系直徑。日球層並非固定120 AU的球殼；歐特雲邊界仍屬估計。",
+      "source": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+      "sourceLabel": "NASA / JPL 原始資料",
+      "extentType": "heliocentric_orbital_semimajor_axis",
+      "value": 30.06992276,
+      "unit": "AU",
+      "approximate": true,
+      "range": null,
+      "lightTime": "太陽到海王星軌道約 4 小時 10 分",
+      "distanceKm": 4498396417.009467,
+      "distanceAU": 30.06992276,
+      "sources": [
+        "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+        "https://www.nasa.gov/solar-system/the-voyage-to-interstellar-space/",
+        "https://science.nasa.gov/learn/basics-of-space-flight/chapter1-1/",
+        "https://science.nasa.gov/solar-system/oort-cloud/facts/"
+      ]
+    },
+    {
+      "id": "stars",
+      "name": "最近的恆星鄰居",
+      "kicker": "太陽之外的下一顆恆星",
+      "scaleLabel": "太陽到比鄰星約 4.24 光年",
+      "title": "看似擁擠的星空，其實相隔很遠",
+      "facts": [
+        "比鄰星是離太陽最近的其他恆星。",
+        "1光年是光在一年中走過的距離，約9.46兆公里。"
+      ],
+      "caution": "恆星圓點為了看清而放大；背景星點是示意分布，不是精確星圖。",
+      "source": "https://science.nasa.gov/sun/facts/",
+      "sourceLabel": "NASA / JPL 原始資料",
+      "extentType": "star_to_star_separation",
+      "value": 4.24,
+      "unit": "ly",
+      "approximate": true,
+      "range": null,
+      "lightTime": "光走過這段距離約需 4.24 年",
+      "distanceLy": 4.24
+    },
+    {
+      "id": "galaxy",
+      "name": "銀河系",
+      "kicker": "太陽系所在的星系",
+      "scaleLabel": "恆星盤直徑約 10 萬光年",
+      "title": "我們住在銀河的一角",
+      "facts": [
+        "太陽系距銀河中心約2.6萬光年，並不在中央。",
+        "約10萬光年描述的是銀河恆星盤的直徑；更外圍的暈並不包含在這把尺中。"
+      ],
+      "caution": "銀河外觀、旋臂與星點為教學示意，並非從銀河外拍攝的照片或精確座標圖。",
+      "source": "https://imagine.gsfc.nasa.gov/science/featured_science/milkyway/index.html",
+      "sourceLabel": "NASA / JPL 原始資料",
+      "extentType": "stellar_disk_diameter",
+      "value": 100000,
+      "unit": "ly",
+      "approximate": true,
+      "range": null,
+      "lightTime": "以靜態距離比較：橫跨恆星盤約 10 萬光年",
+      "distanceLy": 100000,
+      "sunToCenterLy": 26000
+    },
+    {
+      "id": "group",
+      "name": "本星系群",
+      "kicker": "從一個星系到星系鄰里",
+      "scaleLabel": "群體跨度約 1,000 萬光年",
+      "title": "銀河系也有鄰居",
+      "facts": [
+        "銀河系、仙女座星系與三角座星系都是本星系群的成員。",
+        "這裡的約1,000萬光年是整個群體的尺度，不是地球到每個星系的距離。"
+      ],
+      "caution": "星系位置和外觀為程序示意；群體沒有整齊球殼，也不以太陽系為真正中心。",
+      "source": "https://imagine.gsfc.nasa.gov/features/cosmic/local_group_info.html",
+      "sourceLabel": "NASA / JPL 原始資料",
+      "extentType": "group_approximate_diameter",
+      "value": 10000000,
+      "unit": "ly",
+      "approximate": true,
+      "range": null,
+      "lightTime": "此站比較群體跨度，不代表某一顆星系的光行時間",
+      "distanceLy": 10000000
+    },
+    {
+      "id": "universe",
+      "name": "可觀測宇宙",
+      "kicker": "我們能接收到訊息的範圍",
+      "scaleLabel": "今日尺度半徑約 460 億光年",
+      "title": "看得見的範圍，不是全部宇宙",
+      "facts": [
+        "可觀測宇宙今日尺度的直徑約920億光年，半徑約460億光年。",
+        "宇宙年齡約138億年；空間在光傳播時也持續膨脹，因此距離數字與年齡不同。",
+        "我們位於自己的觀測範圍中心，不表示地球是整個宇宙的中心。"
+      ],
+      "caution": "460億光年不是光已旅行460億年，也不是已知宇宙的硬邊界。整個宇宙的大小仍未知；圖中銀河分布是示意。",
+      "source": "https://www.nasa.gov/science-research/astrophysics/how-big-is-space-we-asked-a-nasa-expert-episode-61/",
+      "sourceLabel": "NASA / JPL 原始資料",
+      "extentType": "present_observable_radius",
+      "value": 46000000000,
+      "unit": "ly",
+      "approximate": true,
+      "range": null,
+      "lightTime": "不可用今日距離直接除以光速當作回望時間",
+      "distanceLy": 46000000000,
+      "ageYears": 13800000000,
+      "diameterLy": 92000000000,
+      "sources": [
+        "https://www.nasa.gov/science-research/astrophysics/how-big-is-space-we-asked-a-nasa-expert-episode-61/",
+        "https://science.nasa.gov/exoplanets/what-is-the-universe/",
+        "https://science.nasa.gov/mission/webb/big-bang-q-and-a/"
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "id": "earth",
+      "name": "地球",
+      "value": 12742.0168,
+      "unit": "km",
+      "extentType": "mean_diameter",
+      "description": "從一顆藍色星球出發",
+      "approximate": true,
+      "range": null,
+      "source": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+    },
+    {
+      "id": "sun",
+      "name": "地球到太陽",
+      "value": 1,
+      "unit": "AU",
+      "extentType": "representative_separation",
+      "description": "陽光也需要時間抵達",
+      "approximate": true,
+      "range": null,
+      "source": "https://ssd.jpl.nasa.gov/astro_par.html"
+    },
+    {
+      "id": "solar",
+      "name": "行星區與更遠處",
+      "value": 30.06992276,
+      "unit": "AU",
+      "extentType": "heliocentric_orbital_semimajor_axis",
+      "description": "跨出行星區，旅程仍未結束",
+      "approximate": true,
+      "range": null,
+      "source": "https://ssd.jpl.nasa.gov/planets/approx_pos.html"
+    },
+    {
+      "id": "heliosphere",
+      "name": "日球層頂",
+      "value": 120,
+      "unit": "AU",
+      "extentType": "heliocentric_crossing_distance",
+      "approximate": true,
+      "range": null,
+      "description": "旅行者越界方向的代表日心距離；邊界形狀及位置會變動，非全球半徑。",
+      "source": "https://www.nasa.gov/solar-system/the-voyage-to-interstellar-space/",
+      "sources": [
+        "https://www.nasa.gov/solar-system/the-voyage-to-interstellar-space/",
+        "https://science.nasa.gov/learn/basics-of-space-flight/chapter1-1/"
+      ]
+    },
+    {
+      "id": "oort",
+      "name": "歐特雲",
+      "value": null,
+      "unit": "AU",
+      "extentType": "estimated_heliocentric_radial_extent",
+      "approximate": true,
+      "range": {
+        "innerEdge": [
+          2000,
+          5000
+        ],
+        "outerEdge": [
+          10000,
+          100000
+        ]
+      },
+      "description": "推測存在的遙遠冰天體群，內緣與外緣皆不確定；不是已拍到的實心球殼。",
+      "source": "https://science.nasa.gov/solar-system/oort-cloud/facts/"
+    },
+    {
+      "id": "stars",
+      "name": "最近的恆星鄰居",
+      "value": 4.24,
+      "unit": "ly",
+      "extentType": "star_to_star_separation",
+      "description": "看似擁擠的星空，其實相隔很遠",
+      "approximate": true,
+      "range": null,
+      "source": "https://science.nasa.gov/sun/facts/"
+    },
+    {
+      "id": "galaxy",
+      "name": "銀河系",
+      "value": 100000,
+      "unit": "ly",
+      "extentType": "stellar_disk_diameter",
+      "description": "我們住在銀河的一角",
+      "approximate": true,
+      "range": null,
+      "source": "https://imagine.gsfc.nasa.gov/science/featured_science/milkyway/index.html"
+    },
+    {
+      "id": "group",
+      "name": "本星系群",
+      "value": 10000000,
+      "unit": "ly",
+      "extentType": "group_approximate_diameter",
+      "description": "銀河系也有鄰居",
+      "approximate": true,
+      "range": null,
+      "source": "https://imagine.gsfc.nasa.gov/features/cosmic/local_group_info.html"
+    },
+    {
+      "id": "universe",
+      "name": "可觀測宇宙",
+      "value": 46000000000,
+      "unit": "ly",
+      "extentType": "present_observable_radius",
+      "description": "看得見的範圍，不是全部宇宙",
+      "approximate": true,
+      "range": null,
+      "source": "https://www.nasa.gov/science-research/astrophysics/how-big-is-space-we-asked-a-nasa-expert-episode-61/"
+    }
+  ],
+  "earthOneCmModel": [
+    {
+      "id": "sun",
+      "name": "地球到太陽（1 AU）",
+      "distanceKm": 149597870.7,
+      "modelMeters": 117.40517458743265
+    },
+    {
+      "id": "neptune",
+      "name": "太陽到海王星軌道",
+      "distanceKm": 4498396417.009467,
+      "modelMeters": 3530.364531468415
+    },
+    {
+      "id": "proxima",
+      "name": "太陽到比鄰星",
+      "distanceKm": 40113497203742.586,
+      "modelMeters": 31481277.91178441
+    }
+  ],
+  "quiz": [
+    {
+      "question": "「光年」是哪一種單位？",
+      "options": [
+        "時間",
+        "距離",
+        "質量"
+      ],
+      "answerIndex": 1,
+      "explanation": "光年是光在一年內走過的距離，約9.46兆公里。",
+      "sourceUrl": "https://science.nasa.gov/exoplanets/what-is-a-light-year/"
+    },
+    {
+      "question": "太陽到海王星軌道約30 AU，代表什麼？",
+      "options": [
+        "海王星的直徑",
+        "太陽系精確直徑",
+        "從太陽量到海王星軌道的代表距離"
+      ],
+      "answerIndex": 2,
+      "explanation": "這裡用軌道半長軸描述日心距離；不是天體直徑，也不是太陽系完整範圍。",
+      "sourceUrl": "https://ssd.jpl.nasa.gov/planets/approx_pos.html"
+    },
+    {
+      "question": "可觀測宇宙半徑約460億光年，是否表示宇宙年齡460億年？",
+      "options": [
+        "是",
+        "不是"
+      ],
+      "answerIndex": 1,
+      "explanation": "宇宙年齡約138億年；空間持續膨脹，今日尺度的距離不能直接當作光的旅行時間。",
+      "sourceUrl": "https://www.nasa.gov/science-research/astrophysics/how-big-is-space-we-asked-a-nasa-expert-episode-61/"
+    },
+    {
+      "question": "把地球畫在可觀測範圍的中央，表示地球是整個宇宙中心嗎？",
+      "options": [
+        "表示",
+        "不表示"
+      ],
+      "answerIndex": 1,
+      "explanation": "中央是觀測者的位置；可觀測範圍取決於從哪裡觀察，不是整個宇宙的特權中心。",
+      "sourceUrl": "https://science.nasa.gov/mission/webb/big-bang-q-and-a/"
+    }
+  ],
+  "sources": {
+    "physical": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "constants": "https://ssd.jpl.nasa.gov/astro_par.html",
+    "neptune": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+    "helio": "https://www.nasa.gov/solar-system/the-voyage-to-interstellar-space/",
+    "helioShape": "https://science.nasa.gov/learn/basics-of-space-flight/chapter1-1/",
+    "oort": "https://science.nasa.gov/solar-system/oort-cloud/facts/",
+    "sun": "https://science.nasa.gov/sun/facts/",
+    "ly": "https://science.nasa.gov/exoplanets/what-is-a-light-year/",
+    "galaxy": "https://imagine.gsfc.nasa.gov/science/featured_science/milkyway/index.html",
+    "group": "https://imagine.gsfc.nasa.gov/features/cosmic/local_group_info.html",
+    "universe": "https://www.nasa.gov/science-research/astrophysics/how-big-is-space-we-asked-a-nasa-expert-episode-61/",
+    "age": "https://science.nasa.gov/exoplanets/what-is-the-universe/",
+    "center": "https://science.nasa.gov/mission/webb/big-bang-q-and-a/"
+  }
+}

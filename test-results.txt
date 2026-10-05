@@ -10,12 +10,12 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 
 vite v7.3.6 building client environment for production...
 transforming...
-✓ 10 modules transformed.
+✓ 14 modules transformed.
 rendering chunks...
 computing gzip size...
-dist/index.html                   6.82 kB │ gzip:   3.58 kB
-dist/assets/index-B4HPgJfX.css   10.74 kB │ gzip:   3.20 kB
-dist/assets/index-D-D5jgeS.js   521.77 kB │ gzip: 132.60 kB
+dist/index.html                   9.62 kB │ gzip:   4.64 kB
+dist/assets/index-BeDFDX6v.css   17.00 kB │ gzip:   4.50 kB
+dist/assets/index-Dkq41fKB.js   542.82 kB │ gzip: 140.35 kB
 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
@@ -32,18 +32,24 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 > solar-system-explorer@1.0.0 test
 > node --test tests/*.test.js
 
-✔ eight distinct planets, separate Sun and official citations (1.046748ms)
-✔ orbit positions finite, radius exact, periods complete full circle (0.272182ms)
-✔ orbit geometry closes, uses finite vertices and excludes center (3.133634ms)
-✔ comparison linear and not artificially minimum-clamped (0.192305ms)
-✔ no GPU gracefully exposes all nine bodies and full sources (275.040638ms)
-✔ all bodies selectable repeatedly, comparisons complete (214.076679ms)
-✔ invalid link defaults to Earth, history restores selection (176.414999ms)
-ℹ tests 7
+✔ seven sourced layers distinguish diameters, separations and observable radius (1.454252ms)
+✔ one-centimeter Earth uses one exact linear scale, not visual distances (0.141689ms)
+✔ geometry deterministic, finite and bounded for mobile (7.361542ms)
+✔ all seven fallback scenes draw and jump, keyboard, reset keep content complete (345.115242ms)
+✔ slider commits history and Back restores both cosmic and original planet state (215.826353ms)
+✔ reduced motion, invalid layer, ruler recalculation and original controls survive (152.436502ms)
+✔ eight distinct planets, separate Sun and official citations (1.362506ms)
+✔ orbit positions finite, radius exact, periods complete full circle (0.381685ms)
+✔ orbit geometry closes, uses finite vertices and excludes center (4.415964ms)
+✔ comparison linear and not artificially minimum-clamped (0.226385ms)
+✔ no GPU gracefully exposes all nine bodies and full sources (285.73248ms)
+✔ all bodies selectable repeatedly, comparisons complete (220.705422ms)
+✔ invalid link defaults to Earth, history restores selection (210.693589ms)
+ℹ tests 13
 ℹ suites 0
-ℹ pass 7
+ℹ pass 13
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 1080.442009
+ℹ duration_ms 1130.50934

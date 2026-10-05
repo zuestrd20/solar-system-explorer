@@ -16,3 +16,7 @@ function updatePause(){scene?.setPaused(paused);$('#pause').textContent=paused?'
 const metrics={diameterKm:{unit:'km',note:'平均直徑比較。長條共用線性比例，最長為木星；採體積等效平均半徑 × 2，非赤道直徑。'},distanceAU:{unit:'AU',note:'軌道半長軸比較。長條共用線性比例；這是軌道尺度，並非此刻日距。1 AU 約 1.496 億公里。'},orbitDays:{unit:'地球日',note:'恆星公轉週期比較。長條共用線性比例，內行星的短條很小是正常的；數字仍完整顯示。'}};
 function chart(){const m=metrics[metric],max=Math.max(...planets.map(b=>b[metric]));$('#compare-note').textContent=m.note;$('#chart').innerHTML=planets.map(b=>`<div class="bar-row"><span>${b.name}</span><div class="bar-track" aria-hidden="true"><i style="--body-color:${b.color};width:${ratio(b[metric],max)*100}%"></i></div><span class="bar-value">${format(metric==='diameterKm'?Math.round(b[metric]):b[metric])} ${m.unit}</span></div>`).join('');document.querySelectorAll('[data-metric]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.metric===metric)));}
 document.querySelectorAll('[data-metric]').forEach(b=>b.addEventListener('click',()=>{metric=b.dataset.metric;chart();}));$('#size-row').innerHTML=planets.map(b=>`<div class="size-item">${orb(b,b.diameterKm/planets[4].diameterKm*120)}<span>${b.name}</span></div>`).join('');const initial=new URLSearchParams(location.search).get('planet');select(bodies.some(b=>b.id===initial)?initial:'earth',false);chart();
+
+// Scale journey uses independent layer views; the existing solar simulator remains unchanged.
+import {initCosmic} from './cosmic.js';
+initCosmic();
