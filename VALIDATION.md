@@ -13,3 +13,11 @@
 
 ## Non-blocking build notice
 - Vite warns that the Three.js bundle exceeds 500 kB uncompressed (~133 kB gzip). This is expected for the bundled renderer and avoids third-party CDN dependencies.
+
+## Public deployment verification
+
+- Live URL: https://zuestrd20.github.io/solar-system-explorer/
+- GitHub Pages successful build for exact gh-pages commit a2f7945078a2681a7092f3bba8ce390b509376c6.
+- Publisher verified SHA and size for all 23 source files and all 5 dist files against uploaded content.
+- Cloud Chrome at 1165px viewport: WebGL disabled by environment, automatically displayed complete 2D fallback. Screenshot inspected without horizontal overflow; Mars selection, all three comparison controls, and Back restoration passed.
+- Mobile viewport and real WebGL2/GPU appearance remain unverified. No claim is made that 3D rendered successfully in this environment.
