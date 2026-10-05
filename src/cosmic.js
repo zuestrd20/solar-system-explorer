@@ -1,4 +1,5 @@
 import data from './cosmic-data.json';
+import {initRulerView} from './ruler-view.js';
 import {scaledDistanceMetres} from './cosmic-model.js';
 import {clampProgress} from './cosmic-motion.js';
 import {createCosmicView} from './cosmic-scene.js';
@@ -12,7 +13,8 @@ export function initCosmic(){
  $('#cosmic-stage').addEventListener('keydown',e=>{if(['ArrowRight','ArrowUp','ArrowLeft','ArrowDown','Home','End'].includes(e.key)){e.preventDefault();if(e.key==='Home')show(0,true);else if(e.key==='End')show(stages.length-1,true);else step(['ArrowRight','ArrowUp'].includes(e.key)?1:-1);}});$('#cosmic-stage').tabIndex=0;
  window.addEventListener('popstate',()=>show(clampProgress(new URLSearchParams(location.search).get('cosmic')),false,{immediate:true}));
  const num=n=>new Intl.NumberFormat('zh-TW',{maximumFractionDigits:1}).format(n),distance=m=>m>=1000?`${num(m/1000)} 公里`:`${num(m)} 公尺`;
- function ruler(){const cm=Number($('#earth-cm').value);$('#earth-cm-value').value=cm.toFixed(1)+' cm';const get=km=>scaledDistanceMetres(km,c.earthDiameterKm,cm);$('#ruler-results').innerHTML=[['太陽直徑',distance(get(1400000)),'太陽直徑採約 140 萬公里'],['模型地球到太陽',distance(get(c.auKm)),'真實代表距離：1 AU'],['模型太陽到海王星軌道',distance(get(c.auKm*c.neptuneOrbitAU)),'真實軌道半長軸：約 30 AU'],['模型太陽到比鄰星',distance(get(c.lightYearKm*c.proximaDistanceLy)),'真實距離：約 4.24 光年']].map(([name,value,note])=>`<div class="ruler-result"><span>${name}</span><b>${value}</b><small>${note}</small></div>`).join('');}
- $('#earth-cm').addEventListener('input',ruler);ruler();show(clampProgress(new URLSearchParams(location.search).get('cosmic')),false,{immediate:true});
- return {show,index:()=>index,dispose:()=>view.dispose()};
+ let rulerView=null;
+ function ruler(){const cm=Number($('#earth-cm').value);$('#earth-cm-value').value=cm.toFixed(1)+' cm';rulerView?.setDiameter(cm);const get=km=>scaledDistanceMetres(km,c.earthDiameterKm,cm);$('#ruler-results').innerHTML=[['太陽直徑',distance(get(1400000)),'太陽直徑採約 140 萬公里'],['模型地球到太陽',distance(get(c.auKm)),'真實代表距離：1 AU'],['模型太陽到海王星軌道',distance(get(c.auKm*c.neptuneOrbitAU)),'真實軌道半長軸：約 30 AU'],['模型太陽到比鄰星',distance(get(c.lightYearKm*c.proximaDistanceLy)),'真實距離：約 4.24 光年']].map(([name,value,note])=>`<div class="ruler-result"><span>${name}</span><b>${value}</b><small>${note}</small></div>`).join('');}
+ rulerView=initRulerView($('#ruler-animation'),c,{reducedMotion,onPreset:cm=>{$('#earth-cm').value=String(cm);ruler();}});$('#earth-cm').addEventListener('input',ruler);ruler();show(clampProgress(new URLSearchParams(location.search).get('cosmic')),false,{immediate:true});
+ return {show,index:()=>index,dispose:()=>{view.dispose();rulerView.dispose();}};
 }

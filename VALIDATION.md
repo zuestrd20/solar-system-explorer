@@ -69,3 +69,11 @@
 - Further browser QA was denied by the tool approval layer. The exact call was retried once with the user's authorization evidence and remained denied; no bypass route was attempted.
 - Consequently, this release's public cosmic-web stages 7/8, animated reversal regression, mobile view and real GPU rendering were not visually verified. Their source/geometry/automated checks passed, but those do not replace public visual QA.
 - The separate public-HTTP asset sweep was cancelled before a complete report, so no complete public HTTP hash match is claimed for this revision. Remote repository hashes and Pages CI were verified as stated above.
+
+## Model-Earth ruler animation revision — 2026-10-05, 16:27 UTC
+
+- Materialized and visually inspected the new user screenshot: it points specifically to the model-Earth diameter slider, not the cosmic-scale navigation.
+- Implemented synchronized SVG bead-size and model-distance animations immediately below that control.
+- Full production build/offline generation and 30/30 tests pass.
+- New tests verify same linear scaling for all three distance targets, fixed reference rulers, real intermediate SVG transforms/line positions, interruption and reversal, 1/10 cm presets, distance switching, reduced motion, and coexistence with original cosmic controls.
+- Public browser visual QA has not been performed for this revision. Prior tool denials remain respected; no denied call was repeated or bypassed. Actual mobile layout is not visually verified.
