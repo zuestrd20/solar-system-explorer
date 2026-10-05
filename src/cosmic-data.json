@@ -156,7 +156,8 @@
       "title": "銀河系也有鄰居",
       "facts": [
         "銀河系、仙女座星系與三角座星系都是本星系群的成員。",
-        "這裡的約1,000萬光年是整個群體的尺度，不是地球到每個星系的距離。"
+        "這裡的約1,000萬光年是整個群體的尺度，不是地球到每個星系的距離。",
+        "除了三個醒目的大成員，本星系群也有許多矮星系；畫面中的符號數量只是示意。"
       ],
       "caution": "星系位置和外觀為程序示意；群體沒有整齊球殼，也不以太陽系為真正中心。",
       "source": "https://imagine.gsfc.nasa.gov/features/cosmic/local_group_info.html",
@@ -168,6 +169,56 @@
       "range": null,
       "lightTime": "此站比較群體跨度，不代表某一顆星系的光行時間",
       "distanceLy": 10000000
+    },
+    {
+      "id": "neighbors",
+      "name": "近鄰星系群與星系團",
+      "kicker": "走出本星系群",
+      "scaleLabel": "代表距離約 1,200 萬至 5,400 萬光年",
+      "title": "我們的星系鄰里，還有其他鄰里",
+      "facts": [
+        "M81星系群的代表成員M81距我們約1,200萬光年。",
+        "半人馬A／M83星系群的兩個代表成員分別約1,200萬及1,500萬光年遠。",
+        "室女座星系團約5,400萬光年遠；它是星系團，不是星系群。"
+      ],
+      "caution": "星系的位置、大小、數量與連線都是程序生成的教學示意，不是精確觀測星圖。 所列距離有的是代表成員、有的是星系團代表距離，並非同一座標系的精確群中心。",
+      "source": "https://science.nasa.gov/universe/galaxies/large-scale-structures/",
+      "sourceLabel": "NASA／ESA 原始資料",
+      "sources": [
+        "https://science.nasa.gov/universe/galaxies/large-scale-structures/",
+        "https://www.nasa.gov/image-article/an-infrared-view-of-m81-galaxy/",
+        "https://esahubble.org/news/heic1403/",
+        "https://www.esa.int/Science_Exploration/Space_Science/Herschel/The_dark_heart_of_a_cosmic_collision",
+        "https://www.nasa.gov/universe/suzaku-finds-common-chemical-makeup-at-largest-cosmic-scales/"
+      ],
+      "lightTime": "此站比較不同天體的代表距離，不是單一旅程的時間。",
+      "extentType": "multiple_representative_object_distances",
+      "value": null,
+      "unit": "ly",
+      "approximate": true
+    },
+    {
+      "id": "web",
+      "name": "宇宙網",
+      "kicker": "從鄰里到大尺度結構",
+      "scaleLabel": "細絲、交會區與空洞",
+      "title": "星系並非均勻撒在宇宙裡",
+      "facts": [
+        "星系、星系群與星系團沿細絲狀結構聚集，之間有星系較稀少的空洞。",
+        "星系團常出現在物質聚集的交會區。",
+        "圖中的明亮連線用來提示結構；肉眼不會看見這樣的發光網線。"
+      ],
+      "caution": "星系的位置、大小、數量與連線都是程序生成的教學示意，不是精確觀測星圖。 線條是結構標記；空洞也不是絕對沒有物質。",
+      "source": "https://science.nasa.gov/universe/galaxies/large-scale-structures/",
+      "sourceLabel": "NASA 大尺度結構",
+      "sources": [
+        "https://science.nasa.gov/universe/galaxies/large-scale-structures/"
+      ],
+      "lightTime": "宇宙網是一種分布結構，沒有單一距離或光行時間。",
+      "extentType": "schematic_large_scale_structure",
+      "value": null,
+      "unit": null,
+      "approximate": true
     },
     {
       "id": "universe",
@@ -391,5 +442,105 @@
     "universe": "https://www.nasa.gov/science-research/astrophysics/how-big-is-space-we-asked-a-nasa-expert-episode-61/",
     "age": "https://science.nasa.gov/exoplanets/what-is-the-universe/",
     "center": "https://science.nasa.gov/mission/webb/big-bang-q-and-a/"
+  },
+  "webObjects": [
+    {
+      "id": "m81_group",
+      "name": "M81 星系群",
+      "type": "星系群",
+      "distanceLy": 12000000,
+      "distanceLabel": "代表成員 M81 距地球約 1,200 萬光年",
+      "distanceDefinition": "M81星系的距離，用來表示這群星系所在的大致遠近；不是星系群中心的精確測距。",
+      "facts": [
+        "M81與M82是這一近鄰星系群中的醒目成員。",
+        "M81是一個旋渦星系，並與M82發生重力交互作用。"
+      ],
+      "source": "https://science.nasa.gov/image-article/apod-2008-may-12-the-m81-galaxy-group-through-the-integrated-flux-nebula/",
+      "sources": {
+        "type": "https://science.nasa.gov/image-article/apod-2008-may-12-the-m81-galaxy-group-through-the-integrated-flux-nebula/",
+        "distanceLy": "https://www.nasa.gov/image-article/an-infrared-view-of-m81-galaxy/",
+        "facts": "https://science.nasa.gov/image-article/apod-2008-may-12-the-m81-galaxy-group-through-the-integrated-flux-nebula/"
+      }
+    },
+    {
+      "id": "centaurus_m83_group",
+      "name": "半人馬 A／M83 星系群",
+      "type": "星系群",
+      "distanceLy": null,
+      "distanceLabel": "代表成員：半人馬 A 約 1,200 萬；M83 約 1,500 萬光年",
+      "distanceDefinition": "兩個代表成員分別的地球距離，不是群中心距離或同一測量的不確定區間。",
+      "members": [
+        {
+          "name": "半人馬 A",
+          "distanceLy": 12000000,
+          "source": "https://www.esa.int/Science_Exploration/Space_Science/Herschel/The_dark_heart_of_a_cosmic_collision"
+        },
+        {
+          "name": "M83",
+          "distanceLy": 15000000,
+          "source": "https://esahubble.org/news/heic1403/"
+        }
+      ],
+      "facts": [
+        "ESA/Hubble將半人馬A、M83及NGC 5253列為這個星系群的成員。",
+        "同一群裡不同星系也有前後距離，不能全放在同一距離球面上。"
+      ],
+      "source": "https://esahubble.org/news/heic1403/",
+      "sources": {
+        "type": "https://esahubble.org/news/heic1403/",
+        "members": [
+          "https://www.esa.int/Science_Exploration/Space_Science/Herschel/The_dark_heart_of_a_cosmic_collision",
+          "https://esahubble.org/news/heic1403/"
+        ]
+      },
+      "caution": "不要與半人馬座星系團混淆；這裡介紹的是半人馬A／M83星系群。"
+    },
+    {
+      "id": "virgo_cluster",
+      "name": "室女座星系團",
+      "type": "星系團",
+      "distanceLy": 54000000,
+      "distanceLabel": "距我們約 5,400 萬光年",
+      "distanceDefinition": "NASA科普提供的星系團整體代表距離，團內成員距離並不完全相同。",
+      "facts": [
+        "室女座星系團比一般星系群規模更大。",
+        "其中的星系之間還分布著會發出X射線的熾熱氣體。"
+      ],
+      "source": "https://www.nasa.gov/universe/suzaku-finds-common-chemical-makeup-at-largest-cosmic-scales/",
+      "sources": {
+        "distanceLy": "https://www.nasa.gov/universe/suzaku-finds-common-chemical-makeup-at-largest-cosmic-scales/",
+        "type": "https://www.nasa.gov/universe/suzaku-finds-common-chemical-makeup-at-largest-cosmic-scales/",
+        "facts": [
+          "https://science.nasa.gov/universe/galaxies/large-scale-structures/",
+          "https://www.nasa.gov/universe/suzaku-finds-common-chemical-makeup-at-largest-cosmic-scales/"
+        ]
+      }
+    },
+    {
+      "id": "cosmic_web",
+      "name": "宇宙網",
+      "type": "大尺度物質分布",
+      "distanceLy": null,
+      "distanceLabel": "不是單一遠方天體，也沒有一個共同距離",
+      "distanceDefinition": "星系及物質在大尺度上的網狀分布，非一個能以單一日心距離描述的物件。",
+      "facts": [
+        "星系、星系群與星系團沿細絲狀結構聚集，之間有星系較稀少的空洞。",
+        "星系團常出現在物質聚集的交會區。",
+        "圖中的明亮連線用來提示結構；肉眼不會看見這樣的發光網線。"
+      ],
+      "source": "https://science.nasa.gov/universe/galaxies/large-scale-structures/"
+    }
+  ],
+  "webMetadata": {
+    "verifiedAt": "2026-10-05",
+    "language": "zh-Hant",
+    "visualizationNotice": "星系的位置、大小、數量與連線都是程序生成的教學示意，不是精確觀測星圖。",
+    "distanceNotice": "不要把distanceLy=null自動顯示成0光年。星系群與星系團為不同類型；不以程序粒子數表示實際成员數。",
+    "insertionOrder": [
+      "group",
+      "neighbors",
+      "web",
+      "universe"
+    ]
   }
 }

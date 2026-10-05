@@ -50,3 +50,13 @@
 - Mid-animation reversal verified at progress 0.0764 → 0.0694 with target 0. Rapid retarget preserved an intermediate position; reset yielded progress 0 / moving false, Back restored progress 2 / moving false.
 - Continuous slider step 0.01, return to solar explorer, Mars selection, and all three comparison metrics passed. No horizontal overflow at 1165px.
 - GPU rendering and mobile viewport/touch remain unverified. Canvas2D animation was visually verified; this does not imply WebGL validation.
+
+## Galaxy groups and cosmic-web revision — 2026-10-05, 16:12 UTC
+
+- Actual user screenshot inspected: previous local-group view contained only three sparse point clouds.
+- New local group has recognizable procedural galaxy discs and dwarf-galaxy context; two new stages show neighboring groups/cluster and the cosmic web.
+- Shared procedural glyphs implemented in Canvas2D and WebGL sprite paths.
+- Node tests execute the actual Three.js group builder and validate galaxy sprites, alpha/depth settings, finite transforms and filament geometry without a GPU. This is code/geometry validation, not a claim of GPU rendering.
+- Public visual QA and final full-test results will be recorded after release.
+
+- Full build/offline and 25/25 tests passed for this revision. Coverage includes all nine fallback stages, existing astronomy values, continuous tween/reversal/reset/Back, original planet controls, local-group glyph count, neighbor labels/classification, cosmic-web deterministic geometry, and actual Three.js sprite/line construction.

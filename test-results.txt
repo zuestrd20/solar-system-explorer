@@ -10,18 +10,18 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 
 vite v7.3.6 building client environment for production...
 transforming...
-✓ 15 modules transformed.
+✓ 17 modules transformed.
 rendering chunks...
 computing gzip size...
 dist/index.html                   9.78 kB │ gzip:   4.70 kB
-dist/assets/index-DVn8LnHd.css   17.26 kB │ gzip:   4.58 kB
-dist/assets/index-Brj-MKcg.js   546.68 kB │ gzip: 141.76 kB
+dist/assets/index-4pCMDC5d.css   17.41 kB │ gzip:   4.59 kB
+dist/assets/index-BDQaKrzk.js   561.35 kB │ gzip: 146.45 kB
 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 1.22s
+✓ built in 1.75s
 npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
 
 > solar-system-explorer@1.0.0 offline
@@ -32,32 +32,36 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 > solar-system-explorer@1.0.0 test
 > node --test tests/*.test.js
 
-✔ seven sourced layers distinguish diameters, separations and observable radius (1.68341ms)
-✔ one-centimeter Earth uses one exact linear scale, not visual distances (0.179396ms)
-✔ geometry deterministic, finite and bounded for mobile (7.492302ms)
-✔ all seven fallback scenes draw and jump, keyboard, reset keep content complete (374.341947ms)
-✔ slider commits history and Back restores both cosmic and original planet state (237.311727ms)
-✔ reduced motion, invalid layer, ruler recalculation and original controls survive (145.878488ms)
-✔ actual 2D render produces intermediate scaled frames and reverses without jumping (371.890655ms)
-✔ rapid target changes, reset and Back cancel active UI tween (241.143436ms)
-✔ eight distinct planets, separate Sun and official citations (1.062932ms)
-✔ orbit positions finite, radius exact, periods complete full circle (0.285953ms)
-✔ orbit geometry closes, uses finite vertices and excludes center (2.599996ms)
-✔ comparison linear and not artificially minimum-clamped (0.171164ms)
-✔ default zoom has distinct intermediate time frames and shrinking Earth (1.444446ms)
-✔ reversal and rapid retarget begin exactly at the current animated position (0.203551ms)
-✔ reset and history-style immediate jump cancel pending animation (0.245473ms)
-✔ reduced motion opts out; continuous slider accepts fractional positions (0.203111ms)
-✔ layer scaling is continuous across stops, not a scene replacement (0.326142ms)
-✔ Earth is a shared anchor and Sun aligns through solar-context transition (0.688839ms)
-✔ no GPU gracefully exposes all nine bodies and full sources (315.26712ms)
-✔ all bodies selectable repeatedly, comparisons complete (290.710858ms)
-✔ invalid link defaults to Earth, history restores selection (229.407965ms)
-ℹ tests 21
+✔ nine sourced layers distinguish diameters, separations and observable radius (1.507108ms)
+✔ one-centimeter Earth uses one exact linear scale, not visual distances (0.140838ms)
+✔ geometry deterministic, finite and bounded for mobile (11.086112ms)
+✔ all nine fallback scenes draw and jump, keyboard, reset keep content complete (449.892605ms)
+✔ slider commits history and Back restores both cosmic and original planet state (243.313489ms)
+✔ reduced motion, invalid layer, ruler recalculation and original controls survive (147.095996ms)
+✔ actual 2D render produces intermediate scaled frames and reverses without jumping (396.860379ms)
+✔ rapid target changes, reset and Back cancel active UI tween (268.935756ms)
+✔ eight distinct planets, separate Sun and official citations (1.952988ms)
+✔ orbit positions finite, radius exact, periods complete full circle (1.445903ms)
+✔ orbit geometry closes, uses finite vertices and excludes center (12.474691ms)
+✔ comparison linear and not artificially minimum-clamped (0.216741ms)
+✔ default zoom has distinct intermediate time frames and shrinking Earth (1.850967ms)
+✔ reversal and rapid retarget begin exactly at the current animated position (0.492899ms)
+✔ reset and history-style immediate jump cancel pending animation (0.381244ms)
+✔ reduced motion opts out; continuous slider accepts fractional positions (0.371039ms)
+✔ layer scaling is continuous across stops, not a scene replacement (0.69672ms)
+✔ Earth is a shared anchor and Sun aligns through solar-context transition (1.14968ms)
+✔ no GPU gracefully exposes all nine bodies and full sources (353.770878ms)
+✔ all bodies selectable repeatedly, comparisons complete (330.102ms)
+✔ invalid link defaults to Earth, history restores selection (230.456478ms)
+✔ local group includes large galaxy discs plus dwarf-galaxy context (1.639664ms)
+✔ neighbor groups and Virgo cluster have visible distinct galaxy collections (0.81169ms)
+✔ cosmic web deterministic bounded filaments, nodes and galaxies, not uniform sphere (19.295211ms)
+✔ actual Three.js layer builder creates galaxy sprites and filament geometry without GPU (30.489184ms)
+ℹ tests 25
 ℹ suites 0
-ℹ pass 21
+ℹ pass 25
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 1459.179239
+ℹ duration_ms 1578.687601
