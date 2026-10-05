@@ -91,3 +91,10 @@
 - Retained nine cosmic stages, continuous zoom/reversal/history behavior, neighboring groups/web, original solar-system explorer, planet facts and three comparison modes.
 - Production build/offline generation and 26/26 current tests pass. New removal tests assert absent section/assets and a clean offline start without dangling listeners, then exercise cosmic controls and Mars/comparison functions.
 - No previously denied browser action or cancelled HTTP sweep was retried. New public visual QA is not claimed.
+
+### Published removal verification
+
+- Runtime main commit 1ff695100c66bdb372d0cb6f7ffcb9a10eb02008; deployed gh-pages commit 2827a73318c93c850bbfc2fcdc077318e4142fb7.
+- All 37 source files and 5 dist files matched remote SHA/size. The two deleted ruler-specific source/test files are absent from the current remote tree; prior Git history remains available.
+- Latest Pages workflow 37342234897 succeeded for the deployed SHA. An earlier same-SHA run was cancelled; the publisher did not manually retry it.
+- No public-browser visual QA or public-HTTP sweep was performed. This release is verified by the 26 local tests, remote content hashes and successful Pages deployment, not by a new visual inspection.
