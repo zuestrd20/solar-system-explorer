@@ -1,7 +1,6 @@
 import {localGroupSpec,neighborhoodSpec,cosmicWebSpec} from './cosmic-web.js';
 export const cosmicIds=['earth','sun','solar','stars','galaxy','group','neighbors','web','universe'];
 export function validStage(value){const n=Number(value);return Number.isInteger(n)&&n>=0&&n<cosmicIds.length?n:0;}
-export function scaledDistanceMetres(distanceKm,earthDiameterKm,earthModelCm=1){return distanceKm/earthDiameterKm*earthModelCm/100;}
 export function generateGalaxy(count=1300,seed=312){let state=seed;const rand=()=>{state=state*16807%2147483647;return state/2147483647;};return Array.from({length:count},(_,i)=>{const r=Math.sqrt(rand())*9.4;const arm=i%3;const theta=arm*Math.PI*2/3+r*.48+(rand()-.5)*.9;return {x:Math.cos(theta)*r,y:(rand()-.5)*(.25+(10-r)*.12),z:Math.sin(theta)*r,color:i%7===0?'#f7d4a2':'#a9cced',size:.035+rand()*.04};});}
 export function sceneSpec(index){
  const sphere=(x,y,z,r,color,label)=>({x,y,z,r,color,label});

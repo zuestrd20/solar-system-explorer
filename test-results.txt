@@ -10,18 +10,18 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 
 vite v7.3.6 building client environment for production...
 transforming...
-✓ 18 modules transformed.
+✓ 17 modules transformed.
 rendering chunks...
 computing gzip size...
-dist/index.html                   9.84 kB │ gzip:   4.71 kB
-dist/assets/index-BN2T5VW4.css   19.67 kB │ gzip:   5.04 kB
-dist/assets/index-CbhQ7ot6.js   567.84 kB │ gzip: 148.82 kB
+dist/index.html                   9.34 kB │ gzip:   4.52 kB
+dist/assets/index-In07OUgh.css   16.30 kB │ gzip:   4.35 kB
+dist/assets/index-CZoKu3pY.js   560.37 kB │ gzip: 146.08 kB
 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 1.30s
+✓ built in 1.36s
 npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
 
 > solar-system-explorer@1.0.0 offline
@@ -32,41 +32,37 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 > solar-system-explorer@1.0.0 test
 > node --test tests/*.test.js
 
-✔ nine sourced layers distinguish diameters, separations and observable radius (1.995671ms)
-✔ one-centimeter Earth uses one exact linear scale, not visual distances (0.194358ms)
-✔ geometry deterministic, finite and bounded for mobile (9.580998ms)
-✔ all nine fallback scenes draw and jump, keyboard, reset keep content complete (407.997029ms)
-✔ slider commits history and Back restores both cosmic and original planet state (379.343709ms)
-✔ reduced motion, invalid layer, ruler recalculation and original controls survive (249.354237ms)
-✔ actual 2D render produces intermediate scaled frames and reverses without jumping (358.611264ms)
-✔ rapid target changes, reset and Back cancel active UI tween (381.118234ms)
-✔ eight distinct planets, separate Sun and official citations (1.541249ms)
-✔ orbit positions finite, radius exact, periods complete full circle (0.335616ms)
-✔ orbit geometry closes, uses finite vertices and excludes center (4.279139ms)
-✔ comparison linear and not artificially minimum-clamped (0.193607ms)
-✔ default zoom has distinct intermediate time frames and shrinking Earth (1.287324ms)
-✔ reversal and rapid retarget begin exactly at the current animated position (0.222489ms)
-✔ reset and history-style immediate jump cancel pending animation (0.270931ms)
-✔ reduced motion opts out; continuous slider accepts fractional positions (0.158254ms)
-✔ layer scaling is continuous across stops, not a scene replacement (0.278622ms)
-✔ Earth is a shared anchor and Sun aligns through solar-context transition (0.4732ms)
-✔ model size and all distances change by same linear factor; rulers stay fixed (0.855105ms)
-✔ ruler animation has intermediate geometry, reversible retarget and reduced-motion exit (0.244642ms)
-✔ screenshot slider now drives visible SVG geometry and matching values through real frames (375.947608ms)
-✔ distance targets, animated presets and original cosmic controls remain usable (275.993718ms)
-✔ reduced-motion slider updates both drawing and numbers immediately (195.438747ms)
-✔ no GPU gracefully exposes all nine bodies and full sources (375.426257ms)
-✔ all bodies selectable repeatedly, comparisons complete (462.408932ms)
-✔ invalid link defaults to Earth, history restores selection (325.571848ms)
-✔ local group includes large galaxy discs plus dwarf-galaxy context (1.412479ms)
-✔ neighbor groups and Virgo cluster have visible distinct galaxy collections (0.752633ms)
-✔ cosmic web deterministic bounded filaments, nodes and galaxies, not uniform sphere (9.95351ms)
-✔ actual Three.js layer builder creates galaxy sprites and filament geometry without GPU (23.086643ms)
-ℹ tests 30
+✔ nine sourced layers distinguish diameters, separations and observable radius (1.831399ms)
+✔ geometry deterministic, finite and bounded for mobile (8.36287ms)
+✔ all nine fallback scenes draw and jump, keyboard, reset keep content complete (458.318659ms)
+✔ slider commits history and Back restores both cosmic and original planet state (251.757768ms)
+✔ reduced motion, invalid layer and original controls survive (161.304572ms)
+✔ actual 2D render produces intermediate scaled frames and reverses without jumping (453.670373ms)
+✔ rapid target changes, reset and Back cancel active UI tween (184.539447ms)
+✔ eight distinct planets, separate Sun and official citations (1.396596ms)
+✔ orbit positions finite, radius exact, periods complete full circle (0.359372ms)
+✔ orbit geometry closes, uses finite vertices and excludes center (3.851547ms)
+✔ comparison linear and not artificially minimum-clamped (0.246074ms)
+✔ default zoom has distinct intermediate time frames and shrinking Earth (1.116091ms)
+✔ reversal and rapid retarget begin exactly at the current animated position (0.158955ms)
+✔ reset and history-style immediate jump cancel pending animation (0.132086ms)
+✔ reduced motion opts out; continuous slider accepts fractional positions (0.22982ms)
+✔ layer scaling is continuous across stops, not a scene replacement (0.265993ms)
+✔ Earth is a shared anchor and Sun aligns through solar-context transition (1.011867ms)
+✔ requested model-Earth section and dedicated assets are removed; cosmic and planetary sections remain (1.196801ms)
+✔ complete offline app starts without deleted control references or listener errors (461.073839ms)
+✔ no GPU gracefully exposes all nine bodies and full sources (362.990812ms)
+✔ all bodies selectable repeatedly, comparisons complete (253.479764ms)
+✔ invalid link defaults to Earth, history restores selection (212.810525ms)
+✔ local group includes large galaxy discs plus dwarf-galaxy context (1.470526ms)
+✔ neighbor groups and Virgo cluster have visible distinct galaxy collections (0.666997ms)
+✔ cosmic web deterministic bounded filaments, nodes and galaxies, not uniform sphere (11.094231ms)
+✔ actual Three.js layer builder creates galaxy sprites and filament geometry without GPU (21.751545ms)
+ℹ tests 26
 ℹ suites 0
-ℹ pass 30
+ℹ pass 26
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 1794.054871
+ℹ duration_ms 1499.661923
