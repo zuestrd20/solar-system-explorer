@@ -41,3 +41,12 @@
 - Shared Earth anchor and matching Sun geometry across neighboring solar layers verified mathematically.
 - Vite build and offline generation pass. All prior content/ruler/comparison/history tests retained.
 - Public visual verification for this new animation is pending deployment. Prior expansion screenshots do not validate this animation revision. Real GPU and mobile remain unverified.
+
+### Published continuous-animation verification
+
+- Runtime main commit eb869a48be9cc26dff6b625267a3d97e8d8e6257; gh-pages commit 8c0e0e56cad9956dd32a1cfc5ce9fa8c2156c4c4. Pages workflow 37312540868 succeeded.
+- All 32 source files and 5 dist files matched remote SHA/size; all 5 public HTTP assets returned 200 with matching hashes.
+- Public Cloud Chrome Canvas2D: two intermediate screenshots visibly show decreasing Earth radius, with measured progress 0.0002 → 0.0596 → 0.2172.
+- Mid-animation reversal verified at progress 0.0764 → 0.0694 with target 0. Rapid retarget preserved an intermediate position; reset yielded progress 0 / moving false, Back restored progress 2 / moving false.
+- Continuous slider step 0.01, return to solar explorer, Mars selection, and all three comparison metrics passed. No horizontal overflow at 1165px.
+- GPU rendering and mobile viewport/touch remain unverified. Canvas2D animation was visually verified; this does not imply WebGL validation.
