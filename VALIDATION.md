@@ -23,3 +23,13 @@
 
 ## Build notice
 - Vite emits a non-blocking size notice for the bundled Three.js client. No external CDN or network assets are needed for the offline file.
+
+## Published expansion verification
+
+- Public URL: https://zuestrd20.github.io/solar-system-explorer/
+- Runtime source commit: 8dd198d3964a595286faeece0fa682da7ae4aad4.
+- Exact deployed gh-pages commit: 17c09834e467ca386ac6b03f6223013725bb12aa; Pages workflow 37308695962 succeeded.
+- All 29 source files and all 5 dist files matched remote SHA/size; all 5 public HTTP assets matched local hashes.
+- Cloud Chrome at 1165px: WebGL disabled by the environment; Canvas2D final observable-universe layer visually inspected, no horizontal overflow.
+- Public UI passed direct layer jumps, slider Home/Arrow controls, Back, Earth ruler at 1.1 cm, End/reset, and return to original solar-system explorer.
+- Actual GPU rendering and mobile viewport/touch remain unverified. Published fallback tests do not claim GPU validation.
