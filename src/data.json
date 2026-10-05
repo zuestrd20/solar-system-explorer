@@ -1,0 +1,451 @@
+{
+  "metadata": {
+    "language": "zh-Hant",
+    "verifiedAt": "2026-10-05",
+    "audience": "學生／入門學習者",
+    "diameterDefinition": "行星直徑統一使用JPL體積等效平均半徑×2；顯示時建議取整數公里。太陽使用NASA約140萬公里的教育近似值，並標示約。",
+    "distanceDefinition": "distanceAU是JPL Table 1 J2000軌道半長軸的教育約值，不是當下距離，也不是精確的時間平均日距；地球採地月質心約1 AU。",
+    "orbitDefinition": "orbitDays為JPL恆星公轉週期（年）乘365.25換算的近似地球日；相對恆星繞太陽一圈。",
+    "rotationDefinition": "rotationDays是相對恆星的自轉週期絕對值，方向另列。不要將它標為日出到日出的晝夜長度。",
+    "simulationNotice": "教學圓形軌道近似，起始相位為示意，並非當下星曆。行星大小與軌道距離採不同縮放比例。",
+    "sizeModeNotice": "大小比較：天體尺寸依直徑比例；排列間距為示意。太陽若另行縮放，需另標示。",
+    "distanceModeNotice": "距離比較：依軌道半長軸比例；為了看清天體，其尺寸另外放大。",
+    "appearanceNotice": "程序生成的3D示意外觀，非探測器實拍；顏色供辨識，未作精確色彩校正。",
+    "omissions": "不提供持續更新的衛星數，不將表面與雲頂溫度混作單一可比數值。",
+    "sources": {
+      "planetPhysicalParameters": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "orbitalSemiMajorAxes": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+      "mediaPolicy": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+    }
+  },
+  "sun": {
+    "id": "sun",
+    "name": "太陽",
+    "en": "Sun",
+    "type": "恆星",
+    "color": "#ffbb52",
+    "diameterKm": 1400000,
+    "meanRadiusKm": 700000,
+    "distanceAU": null,
+    "orbitDays": null,
+    "rotationDays": null,
+    "rotationDirection": "差速自轉",
+    "rotationNote": "不是固體：赤道附近約25個地球日自轉一圈，極區約36日。",
+    "tagline": "照亮太陽系的恆星",
+    "facts": [
+      "太陽是太陽系唯一的恆星，主要由氫和氦組成。",
+      "核心核融合釋放能量，提供光與熱。",
+      "太陽沒有固體表面；我們看到的明亮部分稱為光球。"
+    ],
+    "source": "https://science.nasa.gov/sun/facts/",
+    "sources": {
+      "type": "https://science.nasa.gov/sun/facts/",
+      "diameterKm": "https://science.nasa.gov/sun/facts/",
+      "meanRadiusKm": "https://science.nasa.gov/sun/facts/",
+      "rotationNote": "https://science.nasa.gov/sun/facts/",
+      "facts": "https://science.nasa.gov/sun/facts/"
+    }
+  },
+  "planets": [
+    {
+      "id": "mercury",
+      "name": "水星",
+      "en": "Mercury",
+      "type": "岩石行星",
+      "color": "#b8a79b",
+      "diameterKm": 4878.8,
+      "meanRadiusKm": 2439.4,
+      "distanceAU": 0.387,
+      "orbitDays": 87.97,
+      "orbitYears": 0.2408467,
+      "rotationDays": 58.6462,
+      "rotationDirection": "順行",
+      "rotationNote": "相對恆星自轉一圈的週期；不是日出到下一次日出的太陽日。巨行星採JPL參考自轉值，各緯度雲層可有不同速度。",
+      "tagline": "最靠近太陽的小小岩石世界",
+      "facts": [
+        "八大行星中最小，也最靠近太陽。",
+        "表面布滿撞擊坑，外觀有點像月球。",
+        "自轉一圈約59個地球日；完整晝夜循環約176個地球日。"
+      ],
+      "source": "https://science.nasa.gov/mercury/facts/",
+      "sources": {
+        "type": "https://science.nasa.gov/mercury/facts/",
+        "diameterKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "meanRadiusKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "distanceAU": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+        "orbitDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "orbitYears": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDirection": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "facts": [
+          "https://science.nasa.gov/mercury/facts/",
+          "https://science.nasa.gov/mercury/facts/",
+          "https://science.nasa.gov/mercury/facts/"
+        ]
+      },
+      "rawSemiMajorAxisAU": 0.38709927
+    },
+    {
+      "id": "venus",
+      "name": "金星",
+      "en": "Venus",
+      "type": "岩石行星",
+      "color": "#e9bd7b",
+      "diameterKm": 12103.6,
+      "meanRadiusKm": 6051.8,
+      "distanceAU": 0.723,
+      "orbitDays": 224.7,
+      "orbitYears": 0.61519726,
+      "rotationDays": 243.018,
+      "rotationDirection": "逆行",
+      "rotationNote": "相對恆星自轉一圈的週期；不是日出到下一次日出的太陽日。巨行星採JPL參考自轉值，各緯度雲層可有不同速度。",
+      "tagline": "濃厚大氣下的熾熱世界",
+      "facts": [
+        "濃厚大氣造成強烈溫室效應，是太陽系最熱的行星。",
+        "大小和內部結構與地球相近。",
+        "自轉方向與地球相反，太陽會從西方升起。"
+      ],
+      "source": "https://science.nasa.gov/venus/venus-facts/",
+      "sources": {
+        "type": "https://science.nasa.gov/venus/venus-facts/",
+        "diameterKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "meanRadiusKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "distanceAU": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+        "orbitDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "orbitYears": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDirection": "https://science.nasa.gov/venus/venus-facts/",
+        "facts": [
+          "https://science.nasa.gov/venus/venus-facts/",
+          "https://science.nasa.gov/venus/venus-facts/",
+          "https://science.nasa.gov/venus/venus-facts/"
+        ]
+      },
+      "rawSemiMajorAxisAU": 0.72333566
+    },
+    {
+      "id": "earth",
+      "name": "地球",
+      "en": "Earth",
+      "type": "岩石行星",
+      "color": "#5cafe9",
+      "diameterKm": 12742.02,
+      "meanRadiusKm": 6371.0084,
+      "distanceAU": 1.0,
+      "orbitDays": 365.26,
+      "orbitYears": 1.0000174,
+      "rotationDays": 0.99726968,
+      "rotationDirection": "順行",
+      "rotationNote": "相對恆星自轉一圈的週期；不是日出到下一次日出的太陽日。巨行星採JPL參考自轉值，各緯度雲層可有不同速度。",
+      "tagline": "液態海洋覆蓋的家園",
+      "facts": [
+        "八大行星中，地球是最大的岩石行星。",
+        "表面大部分被液態水覆蓋。",
+        "自轉軸傾斜使不同季節的日照角度改變。"
+      ],
+      "source": "https://science.nasa.gov/earth/facts/",
+      "sources": {
+        "type": "https://science.nasa.gov/earth/facts/",
+        "diameterKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "meanRadiusKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "distanceAU": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+        "orbitDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "orbitYears": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDirection": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "facts": [
+          "https://science.nasa.gov/earth/facts/",
+          "https://science.nasa.gov/earth/facts/",
+          "https://science.nasa.gov/earth/facts/"
+        ]
+      },
+      "rawSemiMajorAxisAU": 1.00000261
+    },
+    {
+      "id": "mars",
+      "name": "火星",
+      "en": "Mars",
+      "type": "岩石行星",
+      "color": "#d66d4d",
+      "diameterKm": 6779.0,
+      "meanRadiusKm": 3389.5,
+      "distanceAU": 1.524,
+      "orbitDays": 686.98,
+      "orbitYears": 1.8808476,
+      "rotationDays": 1.02595676,
+      "rotationDirection": "順行",
+      "rotationNote": "相對恆星自轉一圈的週期；不是日出到下一次日出的太陽日。巨行星採JPL參考自轉值，各緯度雲層可有不同速度。",
+      "tagline": "留下古老水跡的紅色行星",
+      "facts": [
+        "土壤中的含鐵礦物氧化，使表面呈現紅色。",
+        "這裡有稀薄大氣、極地冰帽、峽谷和火山。",
+        "探測任務找到許多證據，顯示火星數十億年前更溫暖、更潮濕。"
+      ],
+      "source": "https://science.nasa.gov/mars/facts/",
+      "sources": {
+        "type": "https://science.nasa.gov/mars/facts/",
+        "diameterKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "meanRadiusKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "distanceAU": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+        "orbitDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "orbitYears": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDirection": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "facts": [
+          "https://science.nasa.gov/mars/facts/",
+          "https://science.nasa.gov/mars/facts/",
+          "https://science.nasa.gov/mars/facts/"
+        ]
+      },
+      "rawSemiMajorAxisAU": 1.52371034
+    },
+    {
+      "id": "jupiter",
+      "name": "木星",
+      "en": "Jupiter",
+      "type": "氣體巨行星",
+      "color": "#d8ae80",
+      "diameterKm": 139822,
+      "meanRadiusKm": 69911,
+      "distanceAU": 5.203,
+      "orbitDays": 4332.82,
+      "orbitYears": 11.862615,
+      "rotationDays": 0.41354,
+      "rotationDirection": "順行",
+      "rotationNote": "相對恆星自轉一圈的週期；不是日出到下一次日出的太陽日。巨行星採JPL參考自轉值，各緯度雲層可有不同速度。",
+      "tagline": "雲帶與巨型風暴的王國",
+      "facts": [
+        "木星是太陽系最大的行星。",
+        "大紅斑是一場巨型風暴。",
+        "約10小時自轉一圈，是八大行星中自轉最快的。"
+      ],
+      "source": "https://science.nasa.gov/jupiter/jupiter-facts/",
+      "sources": {
+        "type": "https://science.nasa.gov/jupiter/jupiter-facts/",
+        "diameterKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "meanRadiusKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "distanceAU": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+        "orbitDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "orbitYears": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDirection": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "facts": [
+          "https://science.nasa.gov/jupiter/jupiter-facts/",
+          "https://science.nasa.gov/jupiter/jupiter-facts/",
+          "https://science.nasa.gov/jupiter/jupiter-facts/"
+        ]
+      },
+      "rawSemiMajorAxisAU": 5.202887
+    },
+    {
+      "id": "saturn",
+      "name": "土星",
+      "en": "Saturn",
+      "type": "氣體巨行星",
+      "color": "#e8cc91",
+      "diameterKm": 116464,
+      "meanRadiusKm": 58232,
+      "distanceAU": 9.537,
+      "orbitDays": 10755.7,
+      "orbitYears": 29.447498,
+      "rotationDays": 0.44401,
+      "rotationDirection": "順行",
+      "rotationNote": "相對恆星自轉一圈的週期；不是日出到下一次日出的太陽日。巨行星採JPL參考自轉值，各緯度雲層可有不同速度。",
+      "tagline": "被壯觀光環環繞的巨行星",
+      "facts": [
+        "土星是太陽系第二大的行星。",
+        "土星擁有壯觀的環，但不是唯一有環的行星。",
+        "平均密度比水還低，主要成分是氫和氦。"
+      ],
+      "source": "https://science.nasa.gov/saturn/facts/",
+      "sources": {
+        "type": "https://science.nasa.gov/saturn/facts/",
+        "diameterKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "meanRadiusKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "distanceAU": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+        "orbitDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "orbitYears": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDirection": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "facts": [
+          "https://science.nasa.gov/saturn/facts/",
+          "https://science.nasa.gov/saturn/facts/",
+          "https://science.nasa.gov/saturn/facts/"
+        ]
+      },
+      "rawSemiMajorAxisAU": 9.53667594
+    },
+    {
+      "id": "uranus",
+      "name": "天王星",
+      "en": "Uranus",
+      "type": "冰巨行星",
+      "color": "#92dadd",
+      "diameterKm": 50724,
+      "meanRadiusKm": 25362,
+      "distanceAU": 19.189,
+      "orbitDays": 30687.15,
+      "orbitYears": 84.016846,
+      "rotationDays": 0.71833,
+      "rotationDirection": "逆行",
+      "rotationNote": "相對恆星自轉一圈的週期；不是日出到下一次日出的太陽日。巨行星採JPL參考自轉值，各緯度雲層可有不同速度。",
+      "tagline": "像側躺著滾動的冰巨行星",
+      "facts": [
+        "自轉軸傾角約98度，看起來像側躺著轉動。",
+        "大氣中的甲烷吸收紅光，讓它呈現藍綠色。",
+        "天王星與海王星同屬冰巨行星，內部並不是一整顆固態冰球。"
+      ],
+      "source": "https://science.nasa.gov/uranus/facts/",
+      "sources": {
+        "type": "https://science.nasa.gov/uranus/facts/",
+        "diameterKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "meanRadiusKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "distanceAU": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+        "orbitDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "orbitYears": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDirection": "https://science.nasa.gov/uranus/facts/",
+        "facts": [
+          "https://science.nasa.gov/uranus/facts/",
+          "https://science.nasa.gov/uranus/facts/",
+          "https://science.nasa.gov/uranus/facts/"
+        ]
+      },
+      "rawSemiMajorAxisAU": 19.18916464
+    },
+    {
+      "id": "neptune",
+      "name": "海王星",
+      "en": "Neptune",
+      "type": "冰巨行星",
+      "color": "#568ada",
+      "diameterKm": 49244,
+      "meanRadiusKm": 24622,
+      "distanceAU": 30.07,
+      "orbitDays": 60190.03,
+      "orbitYears": 164.79132,
+      "rotationDays": 0.67125,
+      "rotationDirection": "順行",
+      "rotationNote": "相對恆星自轉一圈的週期；不是日出到下一次日出的太陽日。巨行星採JPL參考自轉值，各緯度雲層可有不同速度。",
+      "tagline": "遙遠而多風的藍色世界",
+      "facts": [
+        "海王星是八大行星中離太陽最遠的。",
+        "大氣中有極強的風。",
+        "天文學家先用數學預測位置，再於1846年確認這顆行星。"
+      ],
+      "source": "https://science.nasa.gov/neptune/neptune-facts/",
+      "sources": {
+        "type": "https://science.nasa.gov/neptune/neptune-facts/",
+        "diameterKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "meanRadiusKm": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "distanceAU": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+        "orbitDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "orbitYears": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDays": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "rotationDirection": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+        "facts": [
+          "https://science.nasa.gov/neptune/neptune-facts/",
+          "https://science.nasa.gov/neptune/neptune-facts/",
+          "https://science.nasa.gov/neptune/neptune-facts/"
+        ]
+      },
+      "rawSemiMajorAxisAU": 30.06992276
+    }
+  ],
+  "quiz": [
+    {
+      "question": "八大行星中，哪一顆最大？",
+      "options": [
+        "地球",
+        "木星",
+        "土星",
+        "海王星"
+      ],
+      "answerIndex": 1,
+      "explanation": "木星是太陽系最大的行星；太陽則是恆星。",
+      "sourceUrl": "https://science.nasa.gov/jupiter/jupiter-facts/"
+    },
+    {
+      "question": "哪一顆行星最靠近太陽？",
+      "options": [
+        "金星",
+        "地球",
+        "火星",
+        "水星"
+      ],
+      "answerIndex": 3,
+      "explanation": "從太陽向外數，第一顆行星是水星。",
+      "sourceUrl": "https://science.nasa.gov/mercury/facts/"
+    },
+    {
+      "question": "太陽系最熱的行星是哪一顆？",
+      "options": [
+        "水星",
+        "金星",
+        "火星",
+        "木星"
+      ],
+      "answerIndex": 1,
+      "explanation": "金星濃厚的大氣造成強烈溫室效應，比更靠近太陽的水星還熱。",
+      "sourceUrl": "https://science.nasa.gov/venus/venus-facts/"
+    },
+    {
+      "question": "哪一顆行星看起來像側躺著自轉？",
+      "options": [
+        "天王星",
+        "土星",
+        "地球",
+        "水星"
+      ],
+      "answerIndex": 0,
+      "explanation": "天王星的自轉軸傾角約98度，與多數行星很不一樣。",
+      "sourceUrl": "https://science.nasa.gov/uranus/facts/"
+    },
+    {
+      "question": "太陽屬於哪一類天體？",
+      "options": [
+        "行星",
+        "衛星",
+        "恆星",
+        "彗星"
+      ],
+      "answerIndex": 2,
+      "explanation": "太陽是一顆恆星，核心核融合供應它的光和熱。",
+      "sourceUrl": "https://science.nasa.gov/sun/facts/"
+    },
+    {
+      "question": "火星為什麼看起來偏紅？",
+      "options": [
+        "表面覆蓋熔岩海",
+        "含鐵礦物氧化",
+        "反射木星的光",
+        "表面全是紅色植物"
+      ],
+      "answerIndex": 1,
+      "explanation": "火星土壤中的含鐵礦物氧化，類似生鏽，使表面偏紅。",
+      "sourceUrl": "https://science.nasa.gov/mars/facts/"
+    },
+    {
+      "question": "八大行星中，哪一顆離太陽最遠？",
+      "options": [
+        "天王星",
+        "土星",
+        "海王星",
+        "木星"
+      ],
+      "answerIndex": 2,
+      "explanation": "海王星是從太陽往外數的第八顆行星。",
+      "sourceUrl": "https://science.nasa.gov/neptune/neptune-facts/"
+    },
+    {
+      "question": "「只有土星有行星環」正確嗎？",
+      "options": [
+        "正確",
+        "不正確"
+      ],
+      "answerIndex": 1,
+      "explanation": "土星的環特別顯眼，但它不是唯一有環的行星。",
+      "sourceUrl": "https://science.nasa.gov/saturn/facts/"
+    }
+  ]
+}

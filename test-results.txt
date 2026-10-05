@@ -1,0 +1,49 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> solar-system-explorer@1.0.0 check
+> npm run build && npm run offline && npm test
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> solar-system-explorer@1.0.0 build
+> vite build --base=./
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 10 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   6.82 kB │ gzip:   3.58 kB
+dist/assets/index-B4HPgJfX.css   10.74 kB │ gzip:   3.20 kB
+dist/assets/index-D-D5jgeS.js   521.77 kB │ gzip: 132.60 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.23s
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> solar-system-explorer@1.0.0 offline
+> node scripts/offline.mjs
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> solar-system-explorer@1.0.0 test
+> node --test tests/*.test.js
+
+✔ eight distinct planets, separate Sun and official citations (1.046748ms)
+✔ orbit positions finite, radius exact, periods complete full circle (0.272182ms)
+✔ orbit geometry closes, uses finite vertices and excludes center (3.133634ms)
+✔ comparison linear and not artificially minimum-clamped (0.192305ms)
+✔ no GPU gracefully exposes all nine bodies and full sources (275.040638ms)
+✔ all bodies selectable repeatedly, comparisons complete (214.076679ms)
+✔ invalid link defaults to Earth, history restores selection (176.414999ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1080.442009
