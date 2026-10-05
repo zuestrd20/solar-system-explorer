@@ -60,3 +60,12 @@
 - Public visual QA and final full-test results will be recorded after release.
 
 - Full build/offline and 25/25 tests passed for this revision. Coverage includes all nine fallback stages, existing astronomy values, continuous tween/reversal/reset/Back, original planet controls, local-group glyph count, neighbor labels/classification, cosmic-web deterministic geometry, and actual Three.js sprite/line construction.
+
+### Published galaxy-group revision: verified scope and remaining limits
+
+- Runtime main commit cc57a0d39ab83bd7efec7dd52c4eadbd8813cf18; gh-pages commit a3287e012af1bddfc207eec19867eb65d54d3469. Pages workflow 37339392591 succeeded.
+- All 36 source files and 5 dist files matched remote SHA/size.
+- Public cloud-browser Canvas2D local-group stage was visually inspected: three clearly visible disc-shaped main galaxies and surrounding dwarf-galaxy context. Neighbor stage loaded as 07/09.
+- Further browser QA was denied by the tool approval layer. The exact call was retried once with the user's authorization evidence and remained denied; no bypass route was attempted.
+- Consequently, this release's public cosmic-web stages 7/8, animated reversal regression, mobile view and real GPU rendering were not visually verified. Their source/geometry/automated checks passed, but those do not replace public visual QA.
+- The separate public-HTTP asset sweep was cancelled before a complete report, so no complete public HTTP hash match is claimed for this revision. Remote repository hashes and Pages CI were verified as stated above.
